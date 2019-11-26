@@ -1,0 +1,244 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head> 
+
+<title>Home | Hallowed Grounds</title> 
+
+<meta charset="utf-8">
+<meta name="viewport" content="initial-scale=1.0,user-scalable=no,maximum-scale=1" media="(device-height: 568px)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="HandheldFriendly" content="True">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+<!-- Style Sheets --> 
+<link rel="stylesheet" type="text/css" media="all" href="css/reset.css" />
+<link rel="stylesheet" type="text/css" media="all" href="css/index.css" />
+
+<!-- Scripts --> 
+<script type="text/javascript">
+	if (typeof jQuery == 'undefined')
+		document.write(unescape("%3Cscript src='js/jquery-1.9.js'" + 
+															"type='text/javascript'%3E%3C/script%3E"))
+</script>
+<script type="text/javascript" language="javascript" src="js/trunk.js"></script>
+</head> 
+ 
+<body> 
+<div class="container">
+
+	<header class="slide">     <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+		<ul id="navToggle" class="burger slide">    <!--	Add "slideRight" class to items that move right when viewing Nav Drawer  -->
+			<li></li><li></li><li></li>
+		</ul>
+		<h1><img src="images/Logo.png" width="170px"></h1>
+	</header>
+
+	<nav class="slide">
+		<ul>
+			<li><a href="index.html" class="active">HOME</a></li>
+			<li><a href="crime.html">CRIME</a></li>
+			<li><a href="login.html">LOGIN</a></li>
+			<li><a href="admin.html">PROFILE</a></li>
+		</ul>
+	</nav>
+	
+	<div class="content slide"> 
+		<ul class="responsive">
+			<li class="header-section">
+				<p class="placefiller">
+					<!-- Start of Header --> 
+						<!-- Start of Slideshow -->
+						<div class="slideshow-container">
+						  <div class="mySlides fade">
+							<div class="numbertext">1 / 3</div>
+							<a href="articleAnnalise.html">
+								<img src="images/banner1.jpg" style="width:100%">
+								<div class="text">The Exorcism of Annalise Michael</div>
+							</a>
+						  </div>
+
+						  <div class="mySlides fade">
+							<div class="numbertext">2 / 3</div>
+							<a href ="articleChris.html">
+								<img src="images/banner3.jpg" style="width:100%">
+								<div class="text">The Chilling Case of Chris Watts</div>
+							</a>
+						  </div>
+
+						  <div class="mySlides fade">
+							<div class="numbertext">3 / 3</div>
+							<a href="article.html">
+								<img src="images/banner2.jpg" style="width:100%">
+								<div class="text">The Prolific Murders of Ted Bundy</div>
+							</a>
+						  </div>
+
+						  <!-- Next & Previous Buttons -->
+						  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+						  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+						</div>
+						<br>
+
+						<!-- Indicators -->
+						<div style="text-align:center">
+						  <span class="dot" onclick="currentSlide(1)"></span>
+						  <span class="dot" onclick="currentSlide(2)"></span>
+						  <span class="dot" onclick="currentSlide(3)"></span>
+						</div>
+
+						<!-- Makes Slideshow Automatic -->			
+						<script>
+							var slideIndex = 0;
+							showSlides();
+
+							function showSlides() {
+							  var i;
+							  var slides = document.getElementsByClassName("mySlides");
+							  var dots = document.getElementsByClassName("dot");
+							  for (i = 0; i < slides.length; i++) {
+								slides[i].style.display = "none";  
+							  }
+							  slideIndex++;
+							  if (slideIndex > slides.length) {slideIndex = 1}    
+							  for (i = 0; i < dots.length; i++) {
+								dots[i].className = dots[i].className.replace(" active", "");
+							  }
+							  slides[slideIndex-1].style.display = "block";  
+							  dots[slideIndex-1].className += " active";
+							  setTimeout(showSlides, 3500); // Chages Image: 3.5 Seconds
+							}
+						</script> <!-- End of Slideshow -->
+				</p>
+			</li>
+			<!-- Start of Main Article -->
+			<section class ="mainArticle">
+				<article>
+					<div class="main"> <!-- Article Content -->
+						<h2>The Prolific Murders of Ted Bundy</h2>
+							<p class = "article">Theodore Robert Bundy (born Theodore Robert Cowell; November 24, 1946 – January 24, 1989) 
+							was an American serial killer who kidnapped, raped, and murdered numerous young women and girls during the 1970s
+							and possibly earlier. After more than a decade of denials, before his execution in 1989 he confessed to 30 homicides
+							that he committed in seven states between 1974 and 1978. The true number of victims is... 
+							<a class ="readMore" href="article.html">Read More</a>	
+							</p>
+					</div>
+					
+					<div class="right"> <!-- Image -->
+						<img src= "images/bundy.jpg" width = 300pxs>
+					</div> <!-- End of Right Class -->						
+				</article>
+			</section> 
+			
+			<!-- Start of  Related Articles -->
+			<section class="articles">
+			<a href="articleAnnalise.html">
+			<!--  ARTICLE #1  --> 
+			<article class="articles__article-card">
+			  
+			  <!--  ARTICLE #1 TOP  -->  
+			  <div class="articles__article-card__top">
+				<span class="articles__article-card__top__article-cat letter-spacing">PARANORMAL</span>
+			  </div>
+			  
+			  <!--  ARTICLE #1 BOTTOM  -->
+			  <div class="articles__article-card__bottom">
+				<div class="articles__article-card__bottom__date-title">
+				  <time class="articles__article-card__bottom__date-title__date letter-spacing" datetime="2019-02-02">NOVEMBER 11TH, 2019</time>
+				  <h2 class="articles__article-card__bottom__date-title__title">The Exorcism of Annalise Michael</h2>
+				</a>
+				</div>
+			  </div>
+			</article>
+			
+			<!--  ARTICLE #2  --> 
+			<a href="articleChris.html">
+			<article class="articles__article-card">
+			  
+			  <!--  ARTICLE #2 TOP --> 
+			  <div class="articles__article-card__top articles__article-card__top--two">
+				<span class="articles__article-card__top__article-cat letter-spacing">CRIME</span>
+			  </div>
+			  
+			  <!--  ARTICLE #2 BOTTOM --> 
+			  <div class="articles__article-card__bottom">
+				<div class="articles__article-card__bottom__date-title">
+				  <time class="articles__article-card__bottom__date-title__date letter-spacing" datetime="2019-23-01">JANUARY 23RD, 2019</time>
+				  <h2 class="articles__article-card__bottom__date-title__title">The Chilling Case of Chris Watts</h2>
+				</div>
+			  </div>
+			</article>
+			</a>
+			
+			<!--  ARTICLE #3  --> 
+			<a href ="articleSlender.html">
+			<article class="articles__article-card">
+			  
+			  <!--  ARTICLE #3 TOP --> 
+			  <div class="articles__article-card__top articles__article-card__top--three">
+				<span class="articles__article-card__top__article-cat letter-spacing">CRIME</span>
+			  </div>
+			  
+			  <!--  ARTICLE #3 BOTTOM -->    
+			  <div class="articles__article-card__bottom">
+				<div class="articles__article-card__bottom__date-title">
+				  <time class="articles__article-card__bottom__date-title__date letter-spacing" datetime="2019-15-01">JANUARY 15TH, 2019</time>
+				  <h2 class="articles__article-card__bottom__date-title__title">The Slender-Man Stabbings</h2>
+				</a>
+				</div>
+			  </div>
+			</article>
+		  </section> <!-- End of Related Articles -->
+		
+		<!-- Ad Placement -->
+		<div class="box ad1">
+			<center>
+				<img class="advert" src="https://via.placeholder.com/1080x150?text=Placeholder Advertisement">
+				<br/>
+			</center>
+		</div>
+		<!-- End of Ad Placement -->
+			<li class="footer-section">
+				<p class="placefiller">
+					<center>
+					<section class="contact-area" id="contact">
+						<div class="row">
+							<div class="col-lg-6 offset-lg-3">
+								<div class="contact-content text-center">
+									<a href="index.html"><img src="images/Logo.png" alt="logo"></a>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum </p>
+									<div class="hr"></div>
+									<h6>Limerick Instuite of Technology, Limerick City</h6>
+									<h6>(061) 293 000<span>|</span>K00242651</h6>
+									<div id="social">
+										<!-- Facebook -->
+										<a href="https://facebook.com/academy" target="_blank">
+										<img width="34" height="34" src="https://res.cloudinary.com/cloudinary-account/image/upload/v1469457641/facebook_khedl5.svg"></a></img>
+										<!-- Twitter -->
+										<a href="https://twitter.com/academy" target="_blank">
+										<img width="34" height="34" src="https://res.cloudinary.com/cloudinary-account/image/upload/v1469457641/twitter_fu5ejk.svg"></a></img>
+										<!-- Pinterest -->
+										<a href="hhttps://pinterest.com/academy/" target="_blank">
+										<img width="34" height="34" src="https://res.cloudinary.com/cloudinary-account/image/upload/v1469457641/pinterest_kahh1i.svg"></a></img>
+										<!-- Youtube -->
+										<a href="https://www.youtube.com/user/academydotcom" target="_blank">
+										<img width="34" height="34" src="https://res.cloudinary.com/cloudinary-account/image/upload/v1469457641/youtube_xrntt3.svg"></a></img>
+										<!-- Instagram -->
+										<a href="http://instagram.com/academy" target="_blank">
+										<img width="34" height="34" src="https://res.cloudinary.com/cloudinary-account/image/upload/v1469457641/instagram_ugek0w.svg"></a></img>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<footer><p>Copyright &copy; 2019 <img src="images/Logo.png" alt="logo"> All Rights Reserved.</p></footer>
+				</center> <!-- End of Footer -->
+				</p>
+			</li>
+			</section>
+		</ul>
+	</div>	
+</div>
+
+	
+</body> 
+</html>
